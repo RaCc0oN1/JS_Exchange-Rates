@@ -21,12 +21,16 @@ btn.addEventListener("click", () => {
   let currency1 = select[0].value;
   let currency2 = select[1].value;
   let value = num.value;
-
+    console.log(value)
+if (value == ""){
+    alert("Введите значение!")
+}else{
   if (currency1 != currency2) {
     convert(currency1, currency2, value);
   } else {
-    alert("Выбери разные валюты!!!");
+    alert("Выбери разные валюты !!!");
   }
+}
 });
 
 function convert(currency1, currency2, value) {
